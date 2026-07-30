@@ -4,8 +4,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
+import {
+  FaGithub,
+  FaLinkedin
+} from "react-icons/fa";
+
+import {
+  Mail
+} from "lucide-react";
+
+
 
 export default function Hero() {
+
 
   const technologies = [
     "React",
@@ -17,26 +28,35 @@ export default function Hero() {
   ];
 
 
+
   return (
+
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden pt-20"
+      className="
+      min-h-screen
+      flex
+      items-center
+      relative
+      overflow-hidden
+      pt-24
+      "
     >
 
 
-      {/* Animated Background Glow */}
+      {/* Background Animation */}
 
       <motion.div
 
         animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.6, 0.3],
+          scale:[1,1.3,1],
+          opacity:[0.3,0.6,0.3]
         }}
 
         transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
+          duration:6,
+          repeat:Infinity,
+          ease:"easeInOut"
         }}
 
         className="
@@ -55,10 +75,25 @@ export default function Hero() {
 
 
 
-      <div className="container mx-auto px-6 relative z-10">
 
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="
+      container
+      mx-auto
+      px-6
+      relative
+      z-10
+      ">
+
+
+        <div className="
+        grid
+        md:grid-cols-2
+        gap-12
+        items-center
+        ">
+
+
 
 
 
@@ -84,208 +119,115 @@ export default function Hero() {
           >
 
 
-            <motion.p
 
-              initial={{
-                opacity:0,
-                y:20
-              }}
-
-              animate={{
-                opacity:1,
-                y:0
-              }}
-
-              transition={{
-                delay:0.2
-              }}
-
-              className="
-              text-blue-400
-              text-lg
-              font-medium
-              "
-            >
-
+            <p className="
+            text-blue-400
+            text-lg
+            font-medium
+            ">
               Hello, I'm
-
-            </motion.p>
-
+            </p>
 
 
 
-            <motion.h1
 
-              initial={{
-                opacity:0,
-                y:20
-              }}
 
-              animate={{
-                opacity:1,
-                y:0
-              }}
-
-              transition={{
-                delay:0.3
-              }}
-
-              className="
-              text-5xl
-              md:text-7xl
-              font-bold
-              mt-4
-              tracking-tight
-              "
-
-            >
+            <h1 className="
+            text-5xl
+            md:text-7xl
+            font-bold
+            mt-4
+            text-white
+            ">
 
               YH Prasad
 
-            </motion.h1>
+            </h1>
 
 
 
 
 
-            {/* Typing Animation */}
-
-            <motion.div
-
-              initial={{
-                opacity:0
-              }}
-
-              animate={{
-                opacity:1
-              }}
-
-              transition={{
-                delay:0.5
-              }}
-
-            >
-
-              <h2
-                className="
-                text-2xl
-                md:text-4xl
-                font-semibold
-                text-gray-300
-                mt-5
-                "
-              >
-
-                <TypeAnimation
-
-                  sequence={[
-                    "Full Stack Developer",
-                    2000,
-
-                    "Next.js Developer",
-                    2000,
-
-                    "MERN Stack Developer",
-                    2000,
-
-                    "Software Engineering Undergraduate",
-                    2000
-                  ]}
-
-                  speed={50}
-
-                  repeat={Infinity}
-
-                />
+            <h2 className="
+            text-2xl
+            md:text-4xl
+            mt-5
+            font-semibold
+            text-gray-300
+            ">
 
 
-              </h2>
+              <TypeAnimation
+
+                sequence={[
+
+                  "Full Stack Developer",
+                  2000,
+
+                  "Next.js Developer",
+                  2000,
+
+                  "MERN Stack Developer",
+                  2000,
+
+                  "Software Engineering Undergraduate",
+                  2000
+
+                ]}
+
+                speed={50}
+
+                repeat={Infinity}
+
+              />
 
 
-            </motion.div>
+            </h2>
 
 
 
 
 
-            <motion.p
 
-              initial={{
-                opacity:0,
-                y:20
-              }}
-
-              animate={{
-                opacity:1,
-                y:0
-              }}
-
-              transition={{
-                delay:0.7
-              }}
-
-              className="
-              text-gray-400
-              text-lg
-              mt-6
-              max-w-xl
-              leading-relaxed
-              "
-
-            >
+            <p className="
+            mt-6
+            text-gray-400
+            text-lg
+            max-w-xl
+            leading-relaxed
+            ">
 
               I build modern, scalable web applications
-              using React, Next.js, Node.js and database
-              technologies. Passionate about clean code,
-              system design, and solving real-world problems
-              through software.
+              using React, Next.js, Node.js and databases.
+              Passionate about clean code, system design,
+              and solving real-world problems through software.
 
-            </motion.p>
-
+            </p>
 
 
 
 
-            {/* Tech Stack */}
 
-            <div className="flex flex-wrap gap-3 mt-8">
+
+
+
+            {/* TECHNOLOGIES */}
+
+
+            <div className="
+            flex
+            flex-wrap
+            gap-3
+            mt-8
+            ">
 
 
               {
-                technologies.map((tech,index)=>(
+                technologies.map((tech)=>(
 
-
-                  <motion.span
+                  <span
 
                     key={tech}
-
-
-                    initial={{
-                      opacity:0,
-                      y:20
-                    }}
-
-
-                    animate={{
-                      opacity:1,
-                      y:[0,-5,0]
-                    }}
-
-
-                    transition={{
-
-                      opacity:{
-                        delay:0.8 + index*0.1
-                      },
-
-                      y:{
-                        duration:2,
-                        repeat:Infinity,
-                        delay:index*0.2
-                      }
-
-                    }}
-
 
                     className="
                     px-4
@@ -302,7 +244,7 @@ export default function Hero() {
 
                     {tech}
 
-                  </motion.span>
+                  </span>
 
 
                 ))
@@ -316,33 +258,18 @@ export default function Hero() {
 
 
 
-            {/* Buttons */}
 
 
-            <motion.div
+            {/* BUTTONS */}
 
-              initial={{
-                opacity:0,
-                y:30
-              }}
 
-              animate={{
-                opacity:1,
-                y:0
-              }}
+            <div className="
+            flex
+            flex-wrap
+            gap-5
+            mt-10
+            ">
 
-              transition={{
-                delay:1
-              }}
-
-              className="
-              flex
-              flex-wrap
-              gap-5
-              mt-10
-              "
-
-            >
 
 
               <motion.a
@@ -363,9 +290,8 @@ export default function Hero() {
                 px-7
                 py-3
                 rounded-lg
+                text-white
                 font-medium
-                shadow-lg
-                shadow-blue-500/30
                 "
 
               >
@@ -373,6 +299,7 @@ export default function Hero() {
                 View Projects
 
               </motion.a>
+
 
 
 
@@ -398,7 +325,7 @@ export default function Hero() {
                 px-7
                 py-3
                 rounded-lg
-                font-medium
+                text-white
                 hover:bg-white
                 hover:text-black
                 transition
@@ -412,54 +339,139 @@ export default function Hero() {
 
 
 
-            </motion.div>
+            </div>
 
 
 
 
 
-            {/* Social Links */}
+
+
+
+            {/* SOCIAL LINKS */}
 
 
             <div className="
-              flex
-              gap-6
-              mt-10
-              text-gray-400
+            flex
+            gap-4
+            mt-8
             ">
 
 
+
               <a
+
                 href="https://github.com/yhprasadhew"
+
                 target="_blank"
-                className="hover:text-white transition"
+
+                rel="noopener noreferrer"
+
+                className="
+                w-12
+                h-12
+                rounded-full
+                bg-slate-800
+                border
+                border-slate-700
+                flex
+                items-center
+                justify-center
+                text-gray-400
+                hover:text-white
+                hover:border-blue-500
+                transition
+                "
+
               >
-                GitHub
+
+                <FaGithub size={24}/>
+
+
               </a>
 
 
+
+
+
+
+
               <a
+
                 href="https://linkedin.com/in/yh-prasad-35b570268"
+
                 target="_blank"
-                className="hover:text-white transition"
+
+                rel="noopener noreferrer"
+
+                className="
+                w-12
+                h-12
+                rounded-full
+                bg-slate-800
+                border
+                border-slate-700
+                flex
+                items-center
+                justify-center
+                text-gray-400
+                hover:text-blue-400
+                hover:border-blue-500
+                transition
+                "
+
               >
-                LinkedIn
+
+                <FaLinkedin size={24}/>
+
+
               </a>
+
+
+
+
+
+
 
 
               <a
+
                 href="mailto:yhprasadhew@gmail.com"
-                className="hover:text-white transition"
+
+                className="
+                w-12
+                h-12
+                rounded-full
+                bg-slate-800
+                border
+                border-slate-700
+                flex
+                items-center
+                justify-center
+                text-gray-400
+                hover:text-red-400
+                hover:border-red-500
+                transition
+                "
+
               >
-                Email
+
+                <Mail size={24}/>
+
+
               </a>
+
+
 
 
             </div>
 
 
 
+
+
           </motion.div>
+
 
 
 
@@ -509,7 +521,6 @@ export default function Hero() {
                 ease:"easeInOut"
               }}
 
-
               className="
               relative
               w-72
@@ -522,7 +533,6 @@ export default function Hero() {
 
 
 
-              {/* Rotating Ring */}
 
               <motion.div
 
@@ -550,21 +560,16 @@ export default function Hero() {
 
 
 
-              {/* Image */}
 
+              <div className="
+              absolute
+              inset-4
+              rounded-full
+              overflow-hidden
+              border-4
+              border-blue-500
+              ">
 
-              <div
-
-                className="
-                absolute
-                inset-4
-                rounded-full
-                overflow-hidden
-                border-4
-                border-blue-500
-                "
-
-              >
 
                 <Image
 
@@ -574,9 +579,11 @@ export default function Hero() {
 
                   fill
 
-                  className="object-cover"
-
                   priority
+
+                  className="
+                  object-cover
+                  "
 
                 />
 
@@ -585,10 +592,15 @@ export default function Hero() {
 
 
 
+
+
             </motion.div>
 
 
+
           </motion.div>
+
+
 
 
 
@@ -598,6 +610,10 @@ export default function Hero() {
       </div>
 
 
+
     </section>
+
+
   );
+
 }
