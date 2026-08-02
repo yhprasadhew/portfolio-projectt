@@ -182,7 +182,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 lg:grid-cols-4 rounded-2xl border border-slate-800/60 divide-y divide-slate-800/60 sm:divide-y-0 sm:divide-x bg-slate-900/30 backdrop-blur-sm overflow-hidden"
+          className="grid grid-cols-2 lg:grid-cols-4 rounded-2xl border border-slate-800/60 divide-y divide-slate-800/60 sm:divide-y-0 sm:divide-x sm:divide-slate-800/60 bg-slate-900/30 backdrop-blur-sm overflow-hidden"
         >
           {STATS.map((stat, idx) => (
             <div
