@@ -44,13 +44,13 @@ export default function Contact() {
       href: "mailto:yhprasadhew@gmail.com"
     },
     {
-      icon: <Github className="text-emerald-400" size={18} />,
+      icon: <FaGithub className="text-emerald-400" size={18} />,
       label: "GitHub",
       value: "github.com/yhprasadhew",
       href: "https://github.com/yhprasadhew"
     },
     {
-      icon: <Linkedin className="text-emerald-400" size={18} />,
+      icon: <FaLinkedin className="text-emerald-400" size={18} />,
       label: "LinkedIn",
       value: "linkedin.com/in/yh-prasad-35b570268",
       href: "https://linkedin.com/in/yh-prasad-35b570268"
